@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13 d17.14
+VisualStudioVersion = 17.14.36915.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphicus-03", "Graphicus-03.vcxproj", "{F1095674-B205-3B41-AF92-23932E152DF1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphicus-03", "Graphicus-03.vcxproj", "{ED90CE56-CA93-38A4-A98C-6275D79DBF28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1095674-B205-3B41-AF92-23932E152DF1}.Debug|x64.ActiveCfg = Debug|x64
-		{F1095674-B205-3B41-AF92-23932E152DF1}.Debug|x64.Build.0 = Debug|x64
-		{F1095674-B205-3B41-AF92-23932E152DF1}.Release|x64.ActiveCfg = Release|x64
-		{F1095674-B205-3B41-AF92-23932E152DF1}.Release|x64.Build.0 = Release|x64
+		{ED90CE56-CA93-38A4-A98C-6275D79DBF28}.Debug|x64.ActiveCfg = Debug|x64
+		{ED90CE56-CA93-38A4-A98C-6275D79DBF28}.Debug|x64.Build.0 = Debug|x64
+		{ED90CE56-CA93-38A4-A98C-6275D79DBF28}.Release|x64.ActiveCfg = Release|x64
+		{ED90CE56-CA93-38A4-A98C-6275D79DBF28}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

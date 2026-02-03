@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F1095674-B205-3B41-AF92-23932E152DF1}</ProjectGuid>
+    <ProjectGuid>{ED90CE56-CA93-38A4-A98C-6275D79DBF28}</ProjectGuid>
     <RootNamespace>Graphicus-03</RootNamespace>
     <Keyword>Qt4VSv1.0</Keyword>
   </PropertyGroup>
@@ -155,6 +155,7 @@
     <ClInclude Include="forme.h" />
     <ClInclude Include="graphicus-03.h" />
     <ClInclude Include="rectangle.h" />
+    <ClInclude Include="vecteur.cpp" />
     <ClInclude Include="vecteur.h" />
   </ItemGroup>
   <ItemGroup>
