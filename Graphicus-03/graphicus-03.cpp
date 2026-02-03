@@ -1,4 +1,8 @@
-int main() {
+#include <random>
+#include <sstream>
+#include "graphicus-03.h"
 
-	return 0;
+Graphicus03 :: Graphicus03(const char* theName) : GraphicusGUI(theName)
+{
+	effacerInformations();
 }

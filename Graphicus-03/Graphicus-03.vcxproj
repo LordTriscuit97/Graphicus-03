@@ -145,6 +145,7 @@
     <ClCompile Include="couche.cpp" />
     <ClCompile Include="forme.cpp" />
     <ClCompile Include="graphicus-03.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
