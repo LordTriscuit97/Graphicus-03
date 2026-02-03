@@ -1,0 +1,11 @@
+﻿  Generate moc_predefs.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): warning MSB8064: Custom build for item "debug\moc_predefs.h.cbt" succeeded, but specified dependency "c:\users\arnaud\documents\github\graphicus-03\graphicus-03\debug\moc_predefs.h.cbt" does not exist. This may cause incremental build to work incorrectly.
+  canevas.cpp
+  carre.cpp
+  cercle.cpp
+  couche.cpp
+  forme.cpp
+  graphicus-03.cpp
+  rectangle.cpp
+  Generating Code...
+  Graphicus-03.vcxproj -> C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\debug\Graphicus-03.exe

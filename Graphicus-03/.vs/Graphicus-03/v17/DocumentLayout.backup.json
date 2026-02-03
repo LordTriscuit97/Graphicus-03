@@ -1,22 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\",
+  "WorkspaceRootPath": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\interface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|solutionrelative:interface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\GraphicusGUI\\graphicusGUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\canevas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\canevas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|solutionrelative:canevas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vecteur.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F1095674-B205-3B41-AF92-23932E152DF1}|Graphicus-03.vcxproj|solutionrelative:vecteur.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\grapicus-03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,36 +33,47 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "interface.cpp",
-              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\interface.cpp",
-              "RelativeDocumentMoniker": "interface.cpp",
-              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\interface.cpp*",
-              "RelativeToolTip": "interface.cpp*",
+              "Title": "graphicusGUI.h",
+              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\GraphicusGUI\\graphicusGUI.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\OneDrive - USherbrooke\\S2\\APP3\\Code\\GraphicusGUI\\graphicusGUI.h",
+              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\GraphicusGUI\\graphicusGUI.h",
+              "RelativeToolTip": "..\\..\\..\\..\\OneDrive - USherbrooke\\S2\\APP3\\Code\\GraphicusGUI\\graphicusGUI.h",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-03T16:05:16.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "grapicus-03.cpp",
+              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\grapicus-03.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\grapicus-03.cpp",
+              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\grapicus-03.cpp",
+              "RelativeToolTip": "..\\..\\..\\..\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\grapicus-03.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-03T15:57:45.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T15:57:45.708Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "canevas.cpp",
-              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\canevas.cpp",
+              "DocumentMoniker": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\canevas.cpp",
               "RelativeDocumentMoniker": "canevas.cpp",
-              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\canevas.cpp",
+              "ToolTip": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\canevas.cpp",
               "RelativeToolTip": "canevas.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-03T15:51:36.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T15:51:36.755Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "vecteur.h",
-              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.h",
+              "DocumentMoniker": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.h",
               "RelativeDocumentMoniker": "vecteur.h",
-              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.h",
+              "ToolTip": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.h",
               "RelativeToolTip": "vecteur.h",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -70,14 +83,13 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "vecteur.cpp",
-              "DocumentMoniker": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.cpp",
+              "DocumentMoniker": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.cpp",
               "RelativeDocumentMoniker": "vecteur.cpp",
-              "ToolTip": "C:\\Users\\Arnaud\\OneDrive - USherbrooke\\S2\\APP3\\Code\\Graphicus-03\\vecteur.cpp",
+              "ToolTip": "C:\\Users\\Arnaud\\Documents\\GitHub\\Graphicus-03\\Graphicus-03\\vecteur.cpp",
               "RelativeToolTip": "vecteur.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-03T15:37:21.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T15:37:21.009Z"
             }
           ]
         }
