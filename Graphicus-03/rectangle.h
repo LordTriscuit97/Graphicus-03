@@ -8,7 +8,6 @@ public:
 	Rectangle(int x = 0, int y = 0, int l = 1, int h = 1);
 	~Rectangle();
 	double aire();
-	void afficher(ostream& s);
 	int getLargeur();
 	int getHauteur();
 	void setLargeur(int l);

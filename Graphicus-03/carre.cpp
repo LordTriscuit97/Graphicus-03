@@ -20,11 +20,6 @@ double Carre::aire()
 }
 
 
-void Carre::afficher(ostream& s)
-{
-	s << "Carré(x=" << ancrage.x << ", y=" << ancrage.y << ", c=" << cote << ", aire=" << aire() << ")" << endl;
-}
-
 
 int Carre::getCote()
 {

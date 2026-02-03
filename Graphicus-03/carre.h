@@ -8,7 +8,6 @@ public:
 	Carre(int x = 0, int y = 0, int c = 1);
 	virtual ~Carre();
 	double aire() override;
-	void afficher(ostream& s) override;
 	int getCote();
 	void setCote(int c);
 
