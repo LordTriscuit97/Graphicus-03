@@ -2,6 +2,7 @@
 #define FORME_H
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -15,9 +16,11 @@ public:
     int getY() const;
     void setAncrage(int x, int y);
     virtual double aire() = 0;
+	virtual string getInformation() = 0;
+
 protected:
-    int x;
-    int y;
+    int pos_x;
+    int pos_y;
 };
 
 #endif

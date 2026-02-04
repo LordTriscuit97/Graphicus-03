@@ -10,6 +10,7 @@ public:
 	double aire() override;
 	int getCote();
 	void setCote(int c);
+	string getInformation();
 
 private:
 	int cote;

@@ -68,6 +68,10 @@ int Vecteur<type>::getTaille() {
 	return taille;
 }
 
+template<typename type>
+void Vecteur<type>::setTaille(int nouvelleTaille) {
+	taille = nouvelleTaille;
+}
 
 template <typename type>
 int Vecteur<type>::getCapacite() {
@@ -117,3 +121,47 @@ Vecteur<type>& Vecteur<type>::operator--()
 	}
 	return *this;
 }
+	
+
+template <typename U>
+ostream& operator<<(ostream& os, const Vecteur<U>& v)
+{
+	for (int i = 0; i < v.taille; i++)
+	{
+		os << v.tableau[i] << " "; 
+	}
+	return os;
+}
+
+template <typename U>
+istream& operator>>(istream& is, Vecteur<U>& v)
+{
+	return is;
+}
+
+
+template <typename type>
+Vecteur<type>& Vecteur<type>::operator=(const Vecteur& other)
+{
+	if (this == &other) return *this;
+	delete[] tableau;
+	capacite = other.capacite;
+	taille = other.taille;
+	tableau = new type[capacite];
+	for (int i = 0; i < taille; ++i) tableau[i] = other.tableau[i];
+	return *this;
+}
+
+
+template<typename type>
+Vecteur<type>::Vecteur(const Vecteur& original)
+{
+	capacite = original.capacite;
+	taille = original.taille;
+	tableau = new type[capacite];
+	for (int i = 0; i < taille; ++i) {
+		tableau[i] = original.tableau[i];
+	}
+}
+
+

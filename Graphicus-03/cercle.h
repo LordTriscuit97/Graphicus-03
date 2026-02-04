@@ -10,6 +10,7 @@ public:
 	double aire();
 	int getRayon();
 	void setRayon(int r);
+	string getInformation();
 
 private:
 	int rayon;

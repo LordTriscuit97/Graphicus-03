@@ -19,5 +19,7 @@ public:
 	bool retirerForme(int index);
 	double aire();
 	bool translater(int deltaX, int deltaY);
+	void modePileChange(bool mode);
+	void afficher(ostream& s);
 };
 #endif

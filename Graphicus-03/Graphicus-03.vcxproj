@@ -156,7 +156,6 @@
     <ClInclude Include="forme.h" />
     <ClInclude Include="graphicus-03.h" />
     <ClInclude Include="rectangle.h" />
-    <ClInclude Include="vecteur.cpp" />
     <ClInclude Include="vecteur.h" />
   </ItemGroup>
   <ItemGroup>

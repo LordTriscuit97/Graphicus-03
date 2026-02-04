@@ -2,6 +2,13 @@
 
 Canevas::Canevas()
 {
+	// Initialisation de 3 couches
+	for (int i = 0; i < 3; i++) {
+		Couche coucheInitiale;
+		couches += coucheInitiale;
+	}
+	
+	couches[0].changerEtat(1); // Première couche active
 }
 
 
@@ -103,3 +110,35 @@ bool Canevas::translater(int deltaX, int deltaY)
 	}
 	return true;
 }
+
+void Canevas::modePileChange(bool mode)
+{
+	if (mode) {
+		//Inversion des couches
+		Vecteur <Couche> couchesInverses;
+		for (int i = couches.getTaille() - 1; i >= 0; i--) {
+			couchesInverses += couches[i];
+		}
+		couches = couchesInverses;
+	}
+}
+
+
+void Canevas::afficher(ostream& s)
+{
+	for (int i = 0; i < couches.getTaille(); i++)
+	{
+		// 1. Écriture de l'entête de la couche (L)
+		s << "L ";
+		if (couches[i].getEtat() == 1) s << "a";
+		else if (couches[i].getEtat() == 0) s << "i";
+		else s << "x";
+		s << endl;
+
+		for(int j = 0; j < couches[i].getNbFormes(); j++) {
+			s << couches[i].obtenir(j)->getInformation() << endl;
+		}
+		
+	}
+}
+

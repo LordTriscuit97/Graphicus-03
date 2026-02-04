@@ -69,3 +69,8 @@ int Couche::getEtat()
 {
 	return etat;
 }
+
+int Couche::getNbFormes()
+{
+	return formes.getTaille();
+}

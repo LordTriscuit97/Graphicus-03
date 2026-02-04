@@ -25,5 +25,6 @@ public:
 	bool reinitialiser();
 	bool changerEtat(int nouvelEtat);
 	int getEtat();
+	int getNbFormes();
 };
 #endif

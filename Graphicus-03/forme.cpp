@@ -2,8 +2,8 @@
 
 Forme::Forme(int x1, int y1)
 {
-    x = x1;
-    y = y1;
+    pos_x = x1;
+    pos_y = y1;
 }
 
 Forme::~Forme()
@@ -12,22 +12,22 @@ Forme::~Forme()
 
 void Forme::translater(int deltaX, int deltaY)
 {
-    x += deltaX;
-    y += deltaY;
+    pos_x += deltaX;
+    pos_y += deltaY;
 }
 
 int Forme::getX() const
 {
-    return x;
+    return pos_x;
 }
 
 int Forme::getY() const
 {
-    return y;
+    return pos_y;
 }
 
 void Forme::setAncrage(int x1, int y1)
 {
-    x = x1;
-    y = y1;
+    pos_x = x1;
+    pos_y = y1;
 }

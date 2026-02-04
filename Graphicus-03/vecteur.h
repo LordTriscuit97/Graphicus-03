@@ -20,31 +20,24 @@ public:
 	bool estVide();
 	int getTaille();
 	int getCapacite();
+	void setTaille(int nouvelleTaille);
 
 	type& operator[](int index);
 	Vecteur& operator+=(type item);
 	Vecteur& operator++();
 	Vecteur& operator--();
+	Vecteur& operator=(const Vecteur& orginal);
+	Vecteur(const Vecteur& original);
+
+	
+	
 
 
-	friend ostream& operator<<(ostream& s, const Vecteur<type>& item)
-	{
-		//Affichage de tous les items du vecteur
-		for (int i = 0; i < item.taille; i++) {
-			s << item.tableau[i] << endl;
-		}
-		return s;
-	}
+	template <typename U>
+	friend ostream& operator<< (std::ostream & s, const Vecteur<U>&item);
 
-
-	friend istream& operator>>(istream& s, Vecteur<type>& item)
-	{
-		//Lecture des items dans le vecteur
-		for (int i = 0; i < item.taille; i++) {
-			s >> item.tableau[i];
-		}
-		return s;
-	}
+	template <typename U>
+	friend istream& operator>> (istream& s, Vecteur<type>& item);
 };
 #include "vecteur.cpp"
 #endif

@@ -12,6 +12,7 @@ public:
 	int getHauteur();
 	void setLargeur(int l);
 	void setHauteur(int h);
+	string getInformation();
 
 protected:
 	int largeur;
