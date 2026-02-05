@@ -7,7 +7,7 @@ Vecteur<type>::Vecteur()
 	capacite = 10;
 	taille = 0;
 	tableau = new type[capacite];
-	indexCourant = 0;
+	indexCourant = -1;
 }
 
 

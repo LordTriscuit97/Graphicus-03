@@ -2,6 +2,9 @@
 #define COUCHE_H
 #include "vecteur.h"
 #include "forme.h"
+#include "cercle.h"
+#include "rectangle.h"
+#include "carre.h"
 
 // 0 : initialisee
 // 1 : active
@@ -17,8 +20,9 @@ public:
 	
 	Couche(int etatBase = 0);
 	~Couche();
+	Couche& operator=(Couche& original);
 	void ajouter(Forme* p_forme);
-	void retirer(int index);
+	void retirer();
 	Forme* obtenir(int index);
 	double aire();
 	bool translater(int deltaX, int deltaY);

@@ -19,7 +19,7 @@ public:
 	bool activerCouche(int index);
 	bool desactiverCouche(int index);
 	bool ajouterForme(Forme* p_forme);
-	bool retirerForme(int index);
+	bool retirerForme();
 	double aire();
 	bool translater(int deltaX, int deltaY);
 	void modePileChange(bool mode);
@@ -41,5 +41,8 @@ public:
 	void activerFormeDerniere();
 	int getNbFormesDansCoucheActive();
 	int getAireCoucheActive();
+	int getIndexFormeActive();
+	Forme* getFormeActivePtr();
+	void afficherDebug();
 };
 #endif

@@ -3,7 +3,7 @@
 Graphicus03 :: Graphicus03(const char* theName) : GraphicusGUI(theName)
 {
 	effacerInformations();
-	rafraichirAffichage();
+	canevas.afficherDebug();
 }
 
 Graphicus03 :: ~Graphicus03()
@@ -31,6 +31,7 @@ bool Graphicus03::sauvegarderFichier(const char* filename) {
 void Graphicus03::coucheTranslater(int deltaX, int deltaY) {
 
 	canevas.translater(deltaX, deltaY);
+	rafraichirAffichage();
 }
 
 void Graphicus03::ajouterCercle(int x, int y, int rayon) {
@@ -61,9 +62,10 @@ void Graphicus03::modePileChange(bool mode) {
 	
 }
 
-
 void Graphicus03::reinitialiserCanevas() {
 	canevas.reinitialiser();
+	canevas.activerCouche(0);
+	rafraichirAffichage();
 }
 
 void Graphicus03::coucheAjouter() {
@@ -76,12 +78,10 @@ void Graphicus03::coucheRetirer() {
 	rafraichirAffichage();
 }
 
-
 void Graphicus03::retirerForme() {
 	canevas.retirerFormeActive();
 	rafraichirAffichage();
 }
-
 
 void Graphicus03::couchePremiere() {
 	canevas.activerCouchePremiere();
@@ -128,21 +128,31 @@ void Graphicus03::rafraichirAffichage() {
 	ostringstream fichierTemp;
 	canevas.afficher(fichierTemp);
 	dessiner(fichierTemp.str().c_str());
-	sauvegarderFichier(nomFichierCourant.c_str());
 	majInformations();
+	canevas.afficherDebug();
 }
 
 void Graphicus03::majInformations() {
-	/*
+	// Initialisation par défaut pour éviter les résidus d'affichage
+	infos.nbCouches = 0;
+	infos.nbFormesCanevas = 0;
+	infos.coucheActive = -1;
+	infos.aireCanevas = 0;
+	infos.nbFormesCouche = 0;
+	infos.aireCouche = 0;
+	infos.formeActive = -1;
+	strcpy(infos.etatCouche, "Inactif");
+	infos.coordX = 0;
+	infos.coordY = 0;
+	infos.aireForme = 0;
+	strcpy(infos.informationForme, "");
+	
 	// Nbre de couches
 	infos.nbCouches = canevas.getNbCouches();
-
 	// Nbre de formes dans le canevas
 	infos.nbFormesCanevas = canevas.getNbFormesTotal();
-
 	// Couche active
 	infos.coucheActive = canevas.getCoucheActive();
-
 	// Aire canevas
 	infos.aireCanevas = canevas.aire();
 
@@ -150,27 +160,25 @@ void Graphicus03::majInformations() {
 
 		// Nbre de formes dans la couche active
 		infos.nbFormesCouche = canevas.getNbFormesDansCoucheActive();
-
 		// État de la couche active
 		strcpy(infos.etatCouche, "Active");
-
 		// Aire de la couche active
 		infos.aireCouche = canevas.getAireCoucheActive();
-
 		// Forme active
-		infos.formeActive = couches[infos.coucheActive].getFormeActive();
+		infos.formeActive = canevas.getIndexFormeActive();
+
 
 		if (infos.formeActive >= 0) {
 
 			// Coordonnées de la forme active
-			Forme* p_forme = couches[infos.coucheActive].obtenir(infos.formeActive);
-			infos.coordX = p_forme->getX();
-			infos.coordY = p_forme->getY();
-
-			// Aire de la forme active
-			infos.aireForme = p_forme->aire();
+			Forme* p_forme = canevas.getFormeActivePtr();
+			
+			if (p_forme != nullptr) {
+				infos.coordX = p_forme->getX(); // Supposant que Forme a getX()
+				infos.coordY = p_forme->getY(); // Supposant que Forme a getY()
+				infos.aireForme = p_forme->aire();
+			}
 		}
 	}
 	setInformations(infos);
-	*/
 }
