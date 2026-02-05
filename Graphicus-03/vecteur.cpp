@@ -41,15 +41,15 @@ void Vecteur<type>::doublerCapacite()
 template <typename type>
 void Vecteur<type>::vider()
 {
-	// Supprimer les pointeurs des formes
+	// Suppression du tableau
 	delete[] tableau;
 
-	// Assignation des nouvelles valeurs de taille et capacité
+	// Nouvelles valeurs
 	taille = 0;
 	capacite = 10;
 	indexCourant = 0;
 
-	// Rétablir un nouveau petit tableau
+	// Nouveau tableau
 	tableau = new type[capacite];
 }
 
@@ -90,12 +90,12 @@ type& Vecteur<type>::operator[](int index)
 template <typename type>
 Vecteur<type>& Vecteur<type>::operator+=(type item)
 {
-	//Vérification de la capacité
+	// Vérification de la capacité
 	if (taille >= capacite) {
 		doublerCapacite();
 	}
 
-	//Ajout de l'item
+	// Ajout de l'item
 	tableau[taille] = item;
 	taille++;
 	return *this;
@@ -142,13 +142,24 @@ istream& operator>>(istream& is, Vecteur<U>& v)
 template <typename type>
 Vecteur<type>& Vecteur<type>::operator=(const Vecteur& original)
 {
-	if (this == &original) return *this;
+	// Vecteurs identiques
+	if (this == &original) {
+		return *this;
+	}
+
 	delete[] tableau;
+
+	// Copie des données
 	capacite = original.capacite;
 	taille = original.taille;
 	indexCourant = original.indexCourant;
 	tableau = new type[capacite];
-	for (int i = 0; i < taille; ++i) tableau[i] = original.tableau[i];
+
+	// Copie des éléments
+	for (int i = 0; i < taille; ++i) {
+		tableau[i] = original.tableau[i];
+	}
+
 	return *this;
 }
 
@@ -156,10 +167,13 @@ Vecteur<type>& Vecteur<type>::operator=(const Vecteur& original)
 template<typename type>
 Vecteur<type>::Vecteur(const Vecteur& original)
 {
+	// Copie des données
 	capacite = original.capacite;
 	taille = original.taille;
 	indexCourant = original.indexCourant;
 	tableau = new type[capacite];
+
+	// Copie des éléments
 	for (int i = 0; i < taille; ++i) {
 		tableau[i] = original.tableau[i];
 	}

@@ -11,17 +11,24 @@ Graphicus03 :: ~Graphicus03()
 }
 
 bool Graphicus03::ouvrirFichier(const char* filename) {
+	// Ouverture du fichier
 	ifstream fichier(filename);
 	canevas.reinitialiser();
 	nomFichierCourant = filename;
+
+	// Lecture du  fichier
 	canevas.lire(fichier);
+
 	rafraichirAffichage();
 	fichier.close();
 	return true;
 }
 
 bool Graphicus03::sauvegarderFichier(const char* filename) {
+	// Ouverture du fichier
 	ofstream fichier(filename);
+
+	// Écriture du canevas dans le fichier
 	canevas.afficher(fichier);
 	nomFichierCourant = filename;
 	fichier.close();
@@ -124,16 +131,18 @@ void Graphicus03::formeDerniere() {
 }
 
 void Graphicus03::rafraichirAffichage() {
-	
+	// Fichier temp
 	ostringstream fichierTemp;
 	canevas.afficher(fichierTemp);
+
+	// Affichage
 	dessiner(fichierTemp.str().c_str());
 	majInformations();
 	canevas.afficherDebug();
 }
 
 void Graphicus03::majInformations() {
-	// Initialisation par défaut pour éviter les résidus d'affichage
+	// Initialisation
 	infos.nbCouches = 0;
 	infos.nbFormesCanevas = 0;
 	infos.coucheActive = -1;
@@ -157,7 +166,6 @@ void Graphicus03::majInformations() {
 	infos.aireCanevas = canevas.aire();
 
 	if(infos.coucheActive >= 0) {
-
 		// Nbre de formes dans la couche active
 		infos.nbFormesCouche = canevas.getNbFormesDansCoucheActive();
 		// État de la couche active
@@ -169,13 +177,12 @@ void Graphicus03::majInformations() {
 
 
 		if (infos.formeActive >= 0) {
-
 			// Coordonnées de la forme active
 			Forme* p_forme = canevas.getFormeActivePtr();
 			
 			if (p_forme != nullptr) {
-				infos.coordX = p_forme->getX(); // Supposant que Forme a getX()
-				infos.coordY = p_forme->getY(); // Supposant que Forme a getY()
+				infos.coordX = p_forme->getX(); 
+				infos.coordY = p_forme->getY();
 				infos.aireForme = p_forme->aire();
 			}
 		}

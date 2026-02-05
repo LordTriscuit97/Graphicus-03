@@ -18,13 +18,12 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-	*this = Canevas(); // Réinitialisation complète du canevas
+	*this = Canevas();
 	return true;
 }
 
 bool Canevas::reinitialiserCouche(int index)
 {
-	// Réinitialisation d'une couche
 	couches[index].reinitialiser();
 	return true;
 }
@@ -103,78 +102,100 @@ void Canevas::modePileChange(bool mode)
 	int ancienIndex = couches.getIndexCourant();
 	int nouvelIndex = -1;
 
-	// nouvel index pour couche active
+	// Nouvel index pour couche active
 	if (ancienIndex != -1) {
 		nouvelIndex = couches.getTaille() - 1 - ancienIndex;
 	}
-	cout << "Ancien index : " << ancienIndex << " | Nouvel index : " << nouvelIndex << endl;
-	// vecteur invesré temp
+	
+	// Vecteur invesré temp
 	Vecteur<Couche> temp;
 	for (int i = couches.getTaille() - 1; i >= 0; i--) {
 		temp += couches[i];
 	}
-	cout << "Vecteur temporaire (inversé) : " << endl;
-	// réinitialistion du vecteur et ajout des valeurs
+	
+	// Réinitialistion du vecteur et ajout des valeurs
 	couches.vider();
 	for (int i = 0; i < temp.getTaille(); i++) {
 		couches += temp[i];
 	}
-	cout << "Vecteur couches après inversion : "<< endl;
-	// activation bonne couche
+
+	// Activation bonne couche
 	if (nouvelIndex != -1) {
 		activerCouche(nouvelIndex);
 	}
 	else {
 		couches.setIndexCourant(-1);
 	}
-	cout << "Index courant après inversion : " << endl;
 }
 
 void Canevas::afficher(ostream& s)
 {
 	for (int i = 0; i < couches.getTaille(); i++)
 	{
-		// 1. Écriture de l'entête de la couche (L)
+		// Écriture couches
 		s << "L ";
-		if (couches[i].getEtat() == 1) s << "a";
-		else if (couches[i].getEtat() == 0) s << "i";
-		else s << "x";
+		if (couches[i].getEtat() == 1) {
+			s << "a";
+		}
+
+		else if (couches[i].getEtat() == 0) {
+			s << "i";
+		}
+
+		else {
+			s << "x";
+		}
+
 		s << endl;
 
+		// Écriture formes
 		for(int j = 0; j < couches[i].getNbFormes(); j++) {
 			s << couches[i].obtenir(j)->getInformation() << endl;
 		}
-		
 	}
 }
 
-void Canevas::lire(istream& s) {
+void Canevas::lire(istream& s) 
+{
+	// Réinitialisation du canevas
 	reinitialiser();
 	couches.vider();
 	couches.setIndexCourant(-1);
 
 	char type;
+	// Lecture du fichier
 	while (s >> type)
 	{
-		// NOUVELLE COUCHE
+		// Nouvelle couche
 		if (type == 'L')
 		{
 			char etatChar;
 			s >> etatChar;
-
 			Couche nouvelle;
-			// On applique l'état lu
-			if (etatChar == 'a') nouvelle.changerEtat(1);
-			else if (etatChar == 'x') nouvelle.changerEtat(2);
-			else nouvelle.changerEtat(0);
 
+			// Changement d'état
+			if (etatChar == 'a') {
+				nouvelle.changerEtat(1);
+			}
+
+			else if (etatChar == 'x') {
+				nouvelle.changerEtat(2);
+			}
+
+			else {
+				nouvelle.changerEtat(0);
+			}
+
+			// Ajout de la couche
 			couches += nouvelle;
 
+			// Si active, mise à jour de l'index courant
 			if (etatChar == 'a') {
 				couches.setIndexCourant(couches.getTaille() - 1);
 			}
 		}
-		// FORMES
+		// Formes
+		// Rectangle
 		else if (type == 'R')
 		{
 			int x, y, l, h;
@@ -182,6 +203,8 @@ void Canevas::lire(istream& s) {
 			if (couches.getTaille() > 0)
 				couches[couches.getTaille() - 1].ajouter(new Rectangle(x, y, l, h));
 		}
+
+		// Carré
 		else if (type == 'K')
 		{
 			int x, y, c;
@@ -189,6 +212,8 @@ void Canevas::lire(istream& s) {
 			if (couches.getTaille() > 0)
 				couches[couches.getTaille() - 1].ajouter(new Carre(x, y, c));
 		}
+
+		// Cercle
 		else if (type == 'C')
 		{
 			int x, y, r;
@@ -202,33 +227,41 @@ void Canevas::lire(istream& s) {
 void Canevas::ajouterCoucheActive()
 {
 	Couche nouvelleCouche;
-	int indexAncienneCoucheActive = getCoucheActive();
-	couches[indexAncienneCoucheActive].changerEtat(2); // Désactivation de l'ancienne couche active
-	nouvelleCouche.changerEtat(1); // Activation de la nouvelle couche
-	couches += nouvelleCouche;
-	couches.setIndexCourant(couches.getTaille() - 1);
+
+	// Changement état des couches
+	int indexAncienneCoucheActive = getCoucheActive(); 
+	couches[indexAncienneCoucheActive].changerEtat(2); 
+	nouvelleCouche.changerEtat(1); 
+	couches += nouvelleCouche; 
+
+	// Mise à jour index courant
+	couches.setIndexCourant(couches.getTaille() - 1); 
 }
 
 void Canevas::retirerCoucheActive()
 {
 	int indexCoucheActive = getCoucheActive();
 
+	// Rien si aucune couche active
 	if (indexCoucheActive == -1) {
 		return;
 	}
 
+	// Suppression couche active
 	for (int i = indexCoucheActive; i < couches.getTaille() - 1; i++) {
 		couches[i] = couches[i + 1];
 	}
 
 	couches.setTaille(couches.getTaille() - 1);
 
+	// Activation nouvelle couche active
 	if (couches.getTaille() > 0) {
-		couches.setIndexCourant(0); // On active la première
+		couches.setIndexCourant(0);
 		couches[couches.getIndexCourant()].changerEtat(1);
 	}
+
 	else {
-		couches.setIndexCourant(-1); // Plus rien ! On met -1.
+		couches.setIndexCourant(-1);
 	}
 }																
 
@@ -249,7 +282,7 @@ int Canevas::getNbFormesTotal()
 int Canevas::getCoucheActive()
 {
 	return couches.getIndexCourant();
-	return -1; // Aucune couche active
+	return -1;
 }
 
 void Canevas::retirerFormeActive()
@@ -325,10 +358,12 @@ int Canevas::getAireCoucheActive()
 int Canevas::getIndexFormeActive()
 {
 	int indexCouche = getCoucheActive();
+	// Vérification couche active
 	if (indexCouche != -1) {
-		// C'est ICI que ça se joue :
-		// Si la couche dit "Active = 0" mais qu'il y a "0 formes", c'est un mensonge.
-		if (couches[indexCouche].getNbFormes() == 0) return -1;
+		// Vérification forme active
+		if (couches[indexCouche].getNbFormes() == 0) {
+			return -1;
+		}
 
 		return couches[indexCouche].getFormeActive();
 	}
@@ -338,9 +373,12 @@ int Canevas::getIndexFormeActive()
 Forme* Canevas::getFormeActivePtr()
 {
 	int indexActif = getCoucheActive();
+	// Vérification couche active
 	if (indexActif >= 0) {
+		// Vérification forme active
 		int indexFormeActive = couches[indexActif].getFormeActive();
 		if (indexFormeActive >= 0) {
+			// Retour pointeur forme active
 			return couches[indexActif].obtenir(indexFormeActive);
 		}
 	}
@@ -349,36 +387,33 @@ Forme* Canevas::getFormeActivePtr()
 
 void Canevas::afficherDebug() {
 	cout << "\n=========================================" << endl;
-	cout << "   ETAT DU CANEVAS (DEBUG VISUEL)   " << endl;
+	cout << "             ETAT DU CANEVAS  " << endl;
 	cout << "=========================================" << endl;
 
 	int indexCoucheActive = getCoucheActive();
 
 	for (int i = 0; i < couches.getTaille(); i++)
 	{
-		// ---------------------------------------------------------
-		// 1. AFFICHAGE DE LA COUCHE (Indicateur à GAUCHE)
-		// ---------------------------------------------------------
 		bool isLayerActive = (i == indexCoucheActive);
 
-		// Marge de gauche : Flèche si active, sinon espaces
 		if (isLayerActive) cout << "==> ";
-		else               cout << "    "; // 4 espaces pour aligner
+		else               cout << "    ";
 
-		// Info Couche
 		cout << "[COUCHE " << i << "] ";
 
-		// État textuel
 		int etat = couches[i].getEtat();
-		if (etat == 1)      cout << "ACTIVE";
-		else if (etat == 2) cout << "Inactive";
-		else                cout << "Initialisee";
+		if (etat == 1) {
+			cout << "ACTIVE";
+		}
+		else if (etat == 2) {
+			cout << "Inactive";
+		}
+		else {
+			cout << "Initialisee";
+		}
 
 		cout << endl;
 
-		// ---------------------------------------------------------
-		// 2. AFFICHAGE DES FORMES
-		// ---------------------------------------------------------
 		int nbFormes = couches[i].getNbFormes();
 		int indexFormeActive = couches[i].getFormeActive();
 
@@ -387,25 +422,18 @@ void Canevas::afficherDebug() {
 		}
 		else {
 			for (int j = 0; j < nbFormes; j++) {
-
-				// Marge pour les formes (décalée par rapport aux couches)
 				cout << "        ";
 
-				// Indicateur de FORME à gauche
-				// Si la couche est active ET la forme est active -> Flèche double
 				if (isLayerActive && j == indexFormeActive) {
 					cout << "-> ";
 				}
-				// Si la couche n'est PAS active, mais le curseur est là -> Petit point
 				else if (j == indexFormeActive) {
 					cout << "* ";
 				}
-				// Sinon rien (alignement)
 				else {
 					cout << "   ";
 				}
 
-				// Données de la forme
 				cout << "[" << j << "] ";
 				Forme* f = couches[i].obtenir(j);
 				if (f) {
@@ -414,9 +442,7 @@ void Canevas::afficherDebug() {
 				cout << endl;
 			}
 		}
-		// Petit séparateur léger entre les couches
 		cout << "    --------------------------------" << endl;
 	}
 	cout << endl;
-
 }
