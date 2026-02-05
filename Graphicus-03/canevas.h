@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include "couche.h"
+#include "rectangle.h"
+#include "carre.h"
+#include "cercle.h"
 
 class Canevas
 {
@@ -21,5 +24,22 @@ public:
 	bool translater(int deltaX, int deltaY);
 	void modePileChange(bool mode);
 	void afficher(ostream& s);
+	void lire(istream& s);
+	void ajouterCoucheActive();
+	void retirerCoucheActive();
+	int getNbCouches();
+	int getNbFormesTotal();
+	int getCoucheActive();
+	void retirerFormeActive();
+	void activerCouchePremiere();
+	void activerCouchePrecedente();
+	void activerCoucheSuivante();
+	void activerCoucheDerniere();
+	void activerFormePremiere();
+	void activerFormePrecedente();
+	void activerFormeSuivante();
+	void activerFormeDerniere();
+	int getNbFormesDansCoucheActive();
+	int getAireCoucheActive();
 };
 #endif

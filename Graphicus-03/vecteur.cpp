@@ -4,16 +4,16 @@ using namespace std;
 template <typename type>
 Vecteur<type>::Vecteur()
 {
-	capacite = 1;
+	capacite = 10;
 	taille = 0;
 	tableau = new type[capacite];
+	indexCourant = 0;
 }
 
 
 template <typename type>
 Vecteur<type>::~Vecteur()
 {
-	vider();
 	delete[] tableau;
 }
 
@@ -46,10 +46,11 @@ void Vecteur<type>::vider()
 
 	// Assignation des nouvelles valeurs de taille et capacité
 	taille = 0;
-	capacite = 1;
+	capacite = 10;
+	indexCourant = 0;
 
 	// Rétablir un nouveau petit tableau
-	tableau = new type[1];
+	tableau = new type[capacite];
 }
 
 
@@ -102,24 +103,22 @@ Vecteur<type>& Vecteur<type>::operator+=(type item)
 
 
 template <typename type>
-Vecteur<type>& Vecteur<type>::operator++()
+void Vecteur<type>::operator++()
 {
 	//Incrémentation de l'index courant
 	if (indexCourant < taille - 1) {
 		indexCourant++;
 	}
-	return *this;
 }
 
 
 template <typename type>
-Vecteur<type>& Vecteur<type>::operator--()
+void Vecteur<type>::operator--()
 {
 	//Décrémentation de l'index courant
 	if (indexCourant > 0) {
 		indexCourant--;
 	}
-	return *this;
 }
 	
 
@@ -141,14 +140,15 @@ istream& operator>>(istream& is, Vecteur<U>& v)
 
 
 template <typename type>
-Vecteur<type>& Vecteur<type>::operator=(const Vecteur& other)
+Vecteur<type>& Vecteur<type>::operator=(const Vecteur& original)
 {
-	if (this == &other) return *this;
+	if (this == &original) return *this;
 	delete[] tableau;
-	capacite = other.capacite;
-	taille = other.taille;
+	capacite = original.capacite;
+	taille = original.taille;
+	indexCourant = original.indexCourant;
 	tableau = new type[capacite];
-	for (int i = 0; i < taille; ++i) tableau[i] = other.tableau[i];
+	for (int i = 0; i < taille; ++i) tableau[i] = original.tableau[i];
 	return *this;
 }
 
@@ -158,10 +158,21 @@ Vecteur<type>::Vecteur(const Vecteur& original)
 {
 	capacite = original.capacite;
 	taille = original.taille;
+	indexCourant = original.indexCourant;
 	tableau = new type[capacite];
 	for (int i = 0; i < taille; ++i) {
 		tableau[i] = original.tableau[i];
 	}
+}
+
+template <typename type>
+int Vecteur<type>::getIndexCourant() {
+	return indexCourant;
+}
+
+template <typename type>
+void Vecteur<type>::setIndexCourant(int nouvelIndex) {
+	indexCourant = nouvelIndex;
 }
 
 

@@ -4,7 +4,6 @@ Graphicus03 :: Graphicus03(const char* theName) : GraphicusGUI(theName)
 {
 	effacerInformations();
 	rafraichirAffichage();
-	
 }
 
 Graphicus03 :: ~Graphicus03()
@@ -12,13 +11,19 @@ Graphicus03 :: ~Graphicus03()
 }
 
 bool Graphicus03::ouvrirFichier(const char* filename) {
-	// À implémenter ultérieurement
-	return false;
+	ifstream fichier(filename);
+	canevas.reinitialiser();
+	nomFichierCourant = filename;
+	canevas.lire(fichier);
+	rafraichirAffichage();
+	fichier.close();
+	return true;
 }
 
 bool Graphicus03::sauvegarderFichier(const char* filename) {
 	ofstream fichier(filename);
 	canevas.afficher(fichier);
+	nomFichierCourant = filename;
 	fichier.close();
 	return true;
 }
@@ -62,61 +67,110 @@ void Graphicus03::reinitialiserCanevas() {
 }
 
 void Graphicus03::coucheAjouter() {
-	couches += Couche(2);
-	
+	canevas.ajouterCoucheActive(); 
+	rafraichirAffichage();
 }
 
 void Graphicus03::coucheRetirer() {
-	couches.setTaille(couches.getTaille() - 1);
+	canevas.retirerCoucheActive();
+	rafraichirAffichage();
 }
 
 
 void Graphicus03::retirerForme() {
-	canevas.retirerForme(0);
+	canevas.retirerFormeActive();
+	rafraichirAffichage();
 }
 
 
 void Graphicus03::couchePremiere() {
-	couches[0].changerEtat(1);
+	canevas.activerCouchePremiere();
+	rafraichirAffichage();
 }
 
 void Graphicus03::couchePrecedente() {
-	couches.
+	canevas.activerCouchePrecedente();
+	rafraichirAffichage();
 }
 
 void Graphicus03::coucheSuivante() {
-	// À implémenter ultérieurement
+	canevas.activerCoucheSuivante();
+	rafraichirAffichage();
 }
 
 void Graphicus03::coucheDerniere() {
-	// À implémenter ultérieurement
+	canevas.activerCoucheDerniere(); 
+	rafraichirAffichage();
 }
 
 void Graphicus03::formePremiere() {
-	// À implémenter ultérieurement
+	canevas.activerFormePremiere();
+	rafraichirAffichage();
 }
 
 void Graphicus03::formePrecedente() {
-	// À implémenter ultérieurement
+	canevas.activerFormePrecedente();
+	rafraichirAffichage();
 }
 
 void Graphicus03::formeSuivante() {
-	// À implémenter ultérieurement
+	canevas.activerFormeSuivante();
+	rafraichirAffichage();
 }
 
 void Graphicus03::formeDerniere() {
-	// À implémenter ultérieurement
+	canevas.activerFormeDerniere();
+	rafraichirAffichage();
 }
 
 void Graphicus03::rafraichirAffichage() {
-	sauvegarderFichier("temp.txt");
-	// 1. On crée un fichier virtuel en mémoire
-	ostringstream fichierVirtuel;
-
-	// 2. On réutilise EXACTEMENT la même logique
-	canevas.afficher(fichierVirtuel);
-
-	// 3. On envoie le texte final à l'écran
-	dessiner(fichierVirtuel.str().c_str());
+	
+	ostringstream fichierTemp;
+	canevas.afficher(fichierTemp);
+	dessiner(fichierTemp.str().c_str());
+	sauvegarderFichier(nomFichierCourant.c_str());
+	majInformations();
 }
 
+void Graphicus03::majInformations() {
+	/*
+	// Nbre de couches
+	infos.nbCouches = canevas.getNbCouches();
+
+	// Nbre de formes dans le canevas
+	infos.nbFormesCanevas = canevas.getNbFormesTotal();
+
+	// Couche active
+	infos.coucheActive = canevas.getCoucheActive();
+
+	// Aire canevas
+	infos.aireCanevas = canevas.aire();
+
+	if(infos.coucheActive >= 0) {
+
+		// Nbre de formes dans la couche active
+		infos.nbFormesCouche = canevas.getNbFormesDansCoucheActive();
+
+		// État de la couche active
+		strcpy(infos.etatCouche, "Active");
+
+		// Aire de la couche active
+		infos.aireCouche = canevas.getAireCoucheActive();
+
+		// Forme active
+		infos.formeActive = couches[infos.coucheActive].getFormeActive();
+
+		if (infos.formeActive >= 0) {
+
+			// Coordonnées de la forme active
+			Forme* p_forme = couches[infos.coucheActive].obtenir(infos.formeActive);
+			infos.coordX = p_forme->getX();
+			infos.coordY = p_forme->getY();
+
+			// Aire de la forme active
+			infos.aireForme = p_forme->aire();
+		}
+	}
+	setInformations(infos);
+	*/
+}

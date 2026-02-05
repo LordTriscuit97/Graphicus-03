@@ -74,6 +74,9 @@
     <ClInclude Include="rectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="vecteur.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="vecteur.h">
       <Filter>Header Files</Filter>
     </ClInclude>

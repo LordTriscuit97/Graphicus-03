@@ -26,5 +26,10 @@ public:
 	bool changerEtat(int nouvelEtat);
 	int getEtat();
 	int getNbFormes();
+	int getFormeActive();
+	void setFormeActive(int index);
+	void formeSuivante();
+	void formePrecedente();
+
 };
 #endif

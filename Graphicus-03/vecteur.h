@@ -21,18 +21,17 @@ public:
 	int getTaille();
 	int getCapacite();
 	void setTaille(int nouvelleTaille);
+	int getIndexCourant();
+	void setIndexCourant(int nouvelIndex);
 
 	type& operator[](int index);
 	Vecteur& operator+=(type item);
-	Vecteur& operator++();
-	Vecteur& operator--();
+	void operator++();
+	void operator--();
 	Vecteur& operator=(const Vecteur& orginal);
 	Vecteur(const Vecteur& original);
 
 	
-	
-
-
 	template <typename U>
 	friend ostream& operator<< (std::ostream & s, const Vecteur<U>&item);
 

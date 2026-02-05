@@ -1,0 +1,172 @@
+﻿  canevas.cpp
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xd3 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x133 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x145 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x22a that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2b0 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3f6 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x401 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x408 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x994 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0x9a5 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xb2f that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xbdc that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xc76 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xc8c that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xc90 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xcbe that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xd03 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe7b that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(1,1): warning C4828: The file contains a character starting at offset 0xeae that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x16b that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x230 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x25d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x281 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x36a that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a7 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x644 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x65d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x72f that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d2 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'canevas.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\canevas.cpp(299,34): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  couche.cpp
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x16b that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x230 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x25d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x281 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x36a that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a7 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x644 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x65d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x72f that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d2 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'couche.cpp')
+  
+  graphicus-03.cpp
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\graphicus-03.cpp(1,1): warning C4828: The file contains a character starting at offset 0xce6 that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\graphicus-03.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe0a that is illegal in the current source character set (codepage 65001).
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x16b that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x230 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x25d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x281 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x36a that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a7 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x644 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x65d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x72f that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d2 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'graphicus-03.cpp')
+  
+  main.cpp
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x16b that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x230 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x25d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x281 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x36a that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a7 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x644 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x65d that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x72f that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d2 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\vecteur.cpp(1,1): warning C4828: The file contains a character starting at offset 0x7d5 that is illegal in the current source character set (codepage 65001).
+  (compiling source file 'main.cpp')
+  
+  Generating Code...
+  Graphicus-03.vcxproj -> C:\Users\Arnaud\Documents\GitHub\Graphicus-03\Graphicus-03\debug\Graphicus-03.exe

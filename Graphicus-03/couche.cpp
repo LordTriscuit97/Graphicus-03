@@ -7,17 +7,25 @@ Couche::Couche(int etatBase)
 
 Couche :: ~Couche()
 {
+	for (int i = 0; i < formes.getTaille(); i++) {
+		delete formes[i];
+	}
 }
 
 void Couche::ajouter(Forme* p_forme)
 {
 	formes += p_forme;
+	formes.setIndexCourant(formes.getTaille() - 1);
 }
 
 
 void Couche::retirer(int index)
 {
-	delete formes[index];
+	for (int i = index; i < formes.getTaille() - 1; i++) {
+		formes[i] = formes[i + 1];
+	}
+	
+	formes.setTaille(formes.getTaille() - 1);
 }
 
 
@@ -53,7 +61,12 @@ bool Couche::translater(int x, int y)
 
 bool Couche::reinitialiser()
 {
+	for (int i = 0; i < formes.getTaille(); i++) {
+		delete formes[i];
+	}
+
 	formes.vider();
+	etat = 0;
 	return true;
 }
 
@@ -74,3 +87,23 @@ int Couche::getNbFormes()
 {
 	return formes.getTaille();
 }
+
+int Couche::getFormeActive()
+{
+	return formes.getIndexCourant();
+
+}
+
+void Couche::setFormeActive(int index)
+{
+	formes.setIndexCourant(index);
+}
+
+void Couche::formeSuivante() {
+	++formes;
+}
+
+void Couche::formePrecedente() {
+	--formes;
+}
+

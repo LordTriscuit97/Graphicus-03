@@ -11,13 +11,16 @@
 #include "carre.h"
 #include "vecteur.h"
 
+using namespace std;
 
 class Graphicus03 : public GraphicusGUI
 {
 	Canevas canevas;
-	Vecteur<Couche> couches;
+
+	string nomFichierCourant;
 
 	public:
+		Informations infos;
 		Graphicus03 (const char *theName = nullptr);
 		~Graphicus03();
 		bool ouvrirFichier(const char*);
@@ -28,6 +31,7 @@ class Graphicus03 : public GraphicusGUI
 		void ajouterCarre(int x, int y, int cote);
 		void modePileChange(bool mode);
 		void rafraichirAffichage();
+		void majInformations();
 
 	public slots:
 		// Menu Canevas
