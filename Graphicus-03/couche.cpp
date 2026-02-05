@@ -13,6 +13,27 @@ Couche :: ~Couche()
 	}
 }
 
+Couche :: Couche(Couche& original)
+{
+	etat = original.etat;
+	
+	for (int i = 0; i < original.formes.getTaille(); i++)
+	{
+		Forme* source = original.formes[i];
+
+		// On identifie le type et on crée une NOUVELLE copie
+		if (Cercle* c = dynamic_cast<Cercle*>(source)) {
+			formes += new Cercle(*c);
+		}
+		else if (Rectangle* r = dynamic_cast<Rectangle*>(source)) {
+			formes += new Rectangle(*r);
+		}
+		else if (Carre* k = dynamic_cast<Carre*>(source)) {
+			formes += new Carre(*k);
+		}
+	}
+}
+
 Couche& Couche::operator=(Couche& original)
 {
 	for (int i = 0; i < formes.getTaille(); i++) {

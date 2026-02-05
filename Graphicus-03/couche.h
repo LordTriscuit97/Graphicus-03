@@ -20,6 +20,7 @@ public:
 	
 	Couche(int etatBase = 0);
 	~Couche();
+	Couche(Couche& original);
 	Couche& operator=(Couche& original);
 	void ajouter(Forme* p_forme);
 	void retirer();

@@ -100,18 +100,34 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::modePileChange(bool mode)
 {
-	int nouvelIndexCoucheActive = couches.getTaille() - 1 - couches.getIndexCourant();
+	int ancienIndex = couches.getIndexCourant();
+	int nouvelIndex = -1;
 
-	if (mode) {
-		//Inversion des couches
-		Vecteur <Couche> couchesInverses;
-		for (int i = couches.getTaille() - 1; i >= 0; i--) {
-			couchesInverses += couches[i];
-		}
-		couches = couchesInverses;
+	// nouvel index pour couche active
+	if (ancienIndex != -1) {
+		nouvelIndex = couches.getTaille() - 1 - ancienIndex;
 	}
-
-	activerCouche(nouvelIndexCoucheActive);
+	cout << "Ancien index : " << ancienIndex << " | Nouvel index : " << nouvelIndex << endl;
+	// vecteur invesré temp
+	Vecteur<Couche> temp;
+	for (int i = couches.getTaille() - 1; i >= 0; i--) {
+		temp += couches[i];
+	}
+	cout << "Vecteur temporaire (inversé) : " << endl;
+	// réinitialistion du vecteur et ajout des valeurs
+	couches.vider();
+	for (int i = 0; i < temp.getTaille(); i++) {
+		couches += temp[i];
+	}
+	cout << "Vecteur couches après inversion : "<< endl;
+	// activation bonne couche
+	if (nouvelIndex != -1) {
+		activerCouche(nouvelIndex);
+	}
+	else {
+		couches.setIndexCourant(-1);
+	}
+	cout << "Index courant après inversion : " << endl;
 }
 
 void Canevas::afficher(ostream& s)
